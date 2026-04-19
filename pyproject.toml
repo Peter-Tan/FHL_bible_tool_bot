@@ -1,0 +1,31 @@
+[project]
+name = "gemma4-nlp"
+version = "0.1.0"
+description = "Gemma 4 E4B — multimodal NLP experiments"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "torch>=2.11.0",
+    "torchvision>=0.26.0",
+    "torchaudio>=2.11.0",
+    "transformers>=5.5.0",
+    "accelerate>=1.13.0",
+    "bitsandbytes>=0.49.0",
+    "huggingface-hub>=1.10.0",
+    "hf-transfer>=0.1.9",
+    "sentence-transformers>=5.4.0",
+    "faiss-cpu>=1.13.0",
+    "requests>=2.33.0",
+    "opencv-python>=4.0.0",
+    "pillow>=12.0.0",
+]
+
+[[tool.uv.index]]
+# PyTorch cu128 wheels for RTX 5070 Ti (Blackwell, CUDA 12.8)
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true   # only use this index for packages listed below
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+torchvision = { index = "pytorch-cu128" }
+torchaudio = { index = "pytorch-cu128" }

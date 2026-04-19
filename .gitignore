@@ -1,0 +1,45 @@
+# Python venv
+.venv/
+
+# Model weights (~16 GB) — users download separately
+gemma4_e4b_model/
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+
+# Secrets
+.env
+*.key
+
+# Logs
+logs/
+
+*.txt
+gemma4_e4b_part2_toolcalling_rag.md
+
+# Internal dev notes
+scripts/local_llm_setup/
+scripts/memo-*.txt
+bible_qa_system.md
+local LLM setup README.md
+gemma_wiki_tool_setup.md
+
+# Old git history backup
+.git_old/
+
+# Claude Code local settings
+.claude/
+
+# Old dev docs
+gemma4_e4b_part1_setup.md
+data/
